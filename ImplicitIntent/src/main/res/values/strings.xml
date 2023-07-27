@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">exercise</string>
+    <string name="title_main_activity">Implicit Intents</string>
+    <string name="hint_website">URL</string>
+    <string name="hint_location">Location name</string>
+    <string name="hint_snippet">Text</string>
+    <string name="btn_text_website">Open Website</string>
+    <string name="btn_text_location">Open Location</string>
+    <string name="btn_text_snippet">Share This Text</string>
+</resources>

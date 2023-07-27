@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit_text_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/border_margin_top"
+        android:layout_marginStart="@dimen/border_margin_start"
+        android:ems="10"
+        android:hint="@string/hint_website"
+        android:inputType="text"
+        android:minHeight="@dimen/edit_text_min_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/button_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_website"
+        app:layout_constraintLeft_toLeftOf="@id/edit_text_website"
+        android:layout_marginTop="@dimen/button_spacing"
+        android:text="@string/btn_text_website" />
+
+    <EditText
+        android:id="@+id/edit_text_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_spacing"
+        android:ems="10"
+        android:hint="@string/hint_location"
+        android:inputType="text"
+        android:minHeight="@dimen/edit_text_min_height"
+        app:layout_constraintLeft_toLeftOf="@id/edit_text_website"
+        app:layout_constraintTop_toBottomOf="@id/button_website"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/button_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_location"
+        app:layout_constraintLeft_toLeftOf="@id/edit_text_website"
+        android:layout_marginTop="@dimen/button_spacing"
+        android:text="@string/btn_text_location" />
+
+    <EditText
+        android:id="@+id/edit_text_share_snippet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_spacing"
+        android:ems="10"
+        android:hint="@string/hint_snippet"
+        android:inputType="text"
+        android:minHeight="@dimen/edit_text_min_height"
+        app:layout_constraintLeft_toLeftOf="@id/edit_text_website"
+        app:layout_constraintTop_toBottomOf="@id/button_location"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/button_share_snippet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_share_snippet"
+        app:layout_constraintLeft_toLeftOf="@id/edit_text_website"
+        android:layout_marginTop="@dimen/button_spacing"
+        android:text="@string/btn_text_snippet" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
