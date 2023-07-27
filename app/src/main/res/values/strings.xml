@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">exercise</string>
+    <string name="title_main_activity">Main Activity</string>
+    <string name="title_second_activity">Second Activity</string>
+    <string name="send_btn_text">Send</string>
+    <string name="send_text_hint">Enter Your Message Here</string>
+    <string name="reply_header">Reply Received</string>
+    <string name="message_header">Message Received</string>
+    <string name="reply_btn_text">Reply</string>
+    <string name="reply_text_hint">Enter Your Reply Here</string>
+</resources>
