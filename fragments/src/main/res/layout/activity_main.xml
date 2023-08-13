@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_like_article" />
+
+    <ImageView
+        android:id="@+id/article_image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/img_the_beatles_anthology"
+        android:layout_marginStart="@dimen/img_margin_start"
+        android:layout_marginTop="@dimen/img_margin_top"
+        android:layout_width="@dimen/img_width"
+        android:layout_height="@dimen/img_height"
+        android:contentDescription="@string/image_content_description" />
+
+    <TextView
+        android:id="@+id/article_text_header"
+        app:layout_constraintLeft_toRightOf="@id/article_image_view"
+        app:layout_constraintTop_toTopOf="@id/article_image_view"
+        android:layout_marginStart="@dimen/text_header_spacing_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        android:textSize="@dimen/text_header_size"
+        android:text="@string/text_view_header" />
+
+    <TextView
+        android:id="@+id/article_text_content"
+        app:layout_constraintTop_toBottomOf="@id/article_text_header"
+        app:layout_constraintLeft_toLeftOf="@id/article_text_header"
+        android:layout_marginTop="@dimen/text_content_spacing_top"
+        android:layout_marginEnd="@dimen/text_content_spacing_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/text_content_max_width"
+        app:layout_constrainedWidth="true"
+        android:textSize="@dimen/text_content_size"
+        android:text="@string/text_view_content" />
+
+    <Button
+        android:id="@+id/btn_open_close_fragment"
+        app:layout_constraintTop_toBottomOf="@id/article_image_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/article_text_content"
+        android:layout_marginTop="@dimen/btn_margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_text_open" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
