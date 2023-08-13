@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gold"
+    tools:context=".LikeArticleFragment">
+
+    <TextView
+        android:id="@+id/fragment_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/fragment_text_margin_start"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/fragment_text_default"
+        android:textSize="@dimen/fragment_text_size"/>
+
+    <RadioGroup
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/fragment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/radio_height"
+        android:layout_marginStart="@dimen/radio_group_spacing">
+
+        <RadioButton
+            android:id="@+id/btn_yes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/fragment_btn_text_yes" />
+
+        <RadioButton
+            android:id="@+id/btn_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/radio_button_spacing"
+            android:text="@string/fragment_btn_text_no" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

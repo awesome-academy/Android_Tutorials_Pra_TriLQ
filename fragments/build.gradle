@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.sun.exercise'
+    namespace 'com.test.fragments'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.sun.exercise"
+        applicationId "com.test.fragments"
         minSdk 24
         targetSdk 33
         versionCode 1
