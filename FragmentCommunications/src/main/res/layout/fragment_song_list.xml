@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Adding the same root's ID for view binding as other layout configurations -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/song_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/container_horizontal_margin"
+    android:layout_marginEnd="@dimen/container_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/album_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="@dimen/album_image_size_square"
+        android:layout_height="@dimen/album_image_size_square"
+        app:srcCompat="@drawable/img_the_beatles_anthology"
+        android:contentDescription="@string/image_content_description" />
+
+    <TextView
+        android:id="@+id/album_title"
+        app:layout_constraintTop_toTopOf="@id/album_image"
+        app:layout_constraintLeft_toRightOf="@id/album_image"
+        android:layout_marginStart="@dimen/container_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/album_title"
+        android:textStyle="bold"
+        android:textSize="@dimen/album_title_text_size" />
+
+    <TextView
+        android:id="@+id/album_description"
+        app:layout_constraintBottom_toBottomOf="@id/album_image"
+        app:layout_constraintLeft_toRightOf="@id/album_image"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/container_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constrainedWidth="true"
+        android:text="@string/album_description"
+        android:textSize="@dimen/album_description_text_size"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/song_list"
+        android:name="com.sun.exercise.SongListFragment"
+        app:layout_constraintTop_toBottomOf="@id/album_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="com.sun.exercise.SongDetailHostActivity"
+        tools:listitem="@layout/song_list_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
